@@ -1,13 +1,45 @@
-<div class=""></div>
+<div class="d-flex flex-row justify-content-between bg-nav-color">
+  <div class="p-2 mylogo">
+    <%= image_tag "logo.png", alt: "Happy pipoquinha", width: 50 %>
+  </div>
+  <div class="d-flex p-2">
+    <div class="px-3">
+      <p>My lists</p>
+    </div>
+    <div class="px-1">
+      <p>New list</p>
+    </div>
+  </div>
+</div>
 
-<h1>Save any kind of movies</h1>
-<p>Classic</p>
 
-<h2>Mylists</h2>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://img.odcdn.com.br/wp-content/uploads/2023/08/capa-da-materia-1.png');">
+ <div class="container">
+    <h1>Save any kind of movie</h1>
+    <p>Classic</p>
+  </div>
+</div>
 
-<p><%= link_to "Create a movie list", new_list_path %></p>
+<div class="container py-4 ">
+  <div class="d-flex flex-row bg-light justify-content-between">
+    <div class="p-2 p-color">
+      <p>My Lists</p>
+    </div>
+    <div class="d-flex bg-light p-2">
+      <%= link_to "Create a movie list", new_list_path, class: "text-decoration-none btn bg-light" %>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <% @lists.each do |list| %>
+      <div class="col-lg-3 my-2">
+        <div>
+          <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) :asset_path('filmcan.jpeg') %>)">
+            <%= link_to list_path(list), class:"link-to-list" do %>
+            <%= list.name %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

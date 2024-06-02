@@ -1,0 +1,45 @@
+$card-bg-color: white;
+
+.movie-card {
+  width: 400px;
+  height: 300px;
+}
+
+div .bg-img {
+  height:200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.title-card {
+  background-color: $card-bg-color;
+  color: black;
+}
+
+.title-card p {
+  font-size: 10px;
+  text-align: left;
+  color: black;
+}
+
+.title-card h3 {
+  font-size: 15px;
+}
+
+.foot-card {
+  padding-top: 8px;
+  background-color: $card-bg-color
+}
+
+.foot-card p {
+  font-size: 10px;
+}
+
+.foot-card h3 {
+  font-size: 10px;
+
+}
+
+.cards-row {
+  height: 415px;
+}

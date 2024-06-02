@@ -1,0 +1,17 @@
+.list-card {
+  display: flex;
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+
+  .link-to-list {
+    color: antiquewhite;
+    text-decoration: none;
+  }
+}
+
+.p-color p {
+  color: black;
+}
